@@ -7,7 +7,7 @@ import { useCart } from "../../context/CartContext";
 // import Scrollcarousel from "../home/Scrollcarousel";
 import dressesData from "../../assets/dressData/dressData";
 import bottomData from "../../assets/bottomData/bottomData";
-import summerData from "../../assets/SummerData/SummerData";
+// import summerData from "../../assets/SummerData/SummerData";
 import winterData from "../../assets/winterData/winterData";
 import topsData from "../../assets/topData/topData";
 import SneakersData from "../../assets/shoesData/sneakerData";
@@ -20,6 +20,7 @@ import blushData from "../../assets/blushData/blushData";
 import foundationData from "../../assets/foundationData/foundationData";
 import Scrollcarousel from "../home/Scrollcarousel";
 import { useWishlist } from "../../context/WishlistContext";
+import summerData from "../../assets/SummerData/SummerData";
 
 const ProductPage = () => {
   const [quantity, setQuantity] = useState(1);
