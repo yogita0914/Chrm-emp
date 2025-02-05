@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 // import { FaHome, FaHeart, FaShoppingCart } from "react-icons/fa";
 import { useCart } from "../../context/CartContext"; 
 import { useWishlist } from "../../context/WishlistContext";
-import "./BottomNavbar.css"; 
+import "./Bottomnavbar.css"; 
 import WishlistIcon from "../../assets/images/Wishlist.svg";
 import Cart from "../../assets/images/Cart.svg";
 import Profile from "../../assets/images/Profile.svg";
