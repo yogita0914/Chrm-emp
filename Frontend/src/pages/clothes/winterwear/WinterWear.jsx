@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CardsDesign from "../../../component/cardsDesign/CardsDesign";
 import winterData from "../../../assets/winterData/winterData";
-import "./Winterwear.css";
+import "./WinterWear.css";
 import { useCart } from "../../../context/CartContext";
 import { useWishlist } from "../../../context/WishlistContext";
 
