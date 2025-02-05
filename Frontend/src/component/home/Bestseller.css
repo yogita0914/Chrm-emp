@@ -1,0 +1,29 @@
+.bestseller-cards {
+  display: flex;
+  justify-content: center; /* Centers buttons horizontally */
+  align-items: center;     /* Centers buttons vertically */
+  gap: 30px;               /* Adds space between buttons */
+}
+
+.bestseller-cards button {
+  font-size: 30px;
+  padding: 10px 10px;
+  background-color: transparent; /* Optional: make background transparent */
+  cursor: pointer;
+  outline: none; /* Removes the outline around the button */
+  border: none;  /* Ensures there is no border around the button */
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.bestseller-cards button:active {
+  text-decoration: underline;  /* Underline button when clicked */
+}
+
+
+/* Media Query for very small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .bestseller-cards button {
+    font-size: 30px;  /* Reduce font size for smaller screens */
+    padding: 8px 8px; /* Adjust padding for better spacing */
+  }
+}

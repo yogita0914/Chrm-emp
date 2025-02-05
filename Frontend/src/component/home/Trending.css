@@ -1,0 +1,12 @@
+
+.w2-trending-header {
+    text-align: center; /* Centers the text */
+    font-size: 2.2rem; /* Makes the font bigger */
+    /* font-family: Arial, sans-serif;  */
+    /* Optional: Specify a font family */
+    font-weight: 400;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+

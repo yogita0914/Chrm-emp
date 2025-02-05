@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
+</head>
+<body>
+    <img src="{{ product.img.url }}" alt="Product Image" width="20%" height="20%">
+    <h1>{{ product.p_name }}</h1>
+    <h2>Price: {{ product.p_price }}</h2>
+    <h2>Description: {{ product.p_description }}</h2>
+    <h3>Rating: {{ product.averageRating }}</h3>
+        
+    <span>
+
+        {% with product.averageRating as rating %}
+            {% for star in "12345" %}
+                {% if forloop.counter <= rating %}
+                    <i class="fas fa-star" style="color: gold;"></i> <!-- Full Star -->
+                {% elif rating|floatformat:1 > forloop.counter|floatformat:0 and rating|floatformat:1 < forloop.counter|add:"1"|floatformat:0 %}
+                    <i class="fas fa-star-half-alt" style="color: gold;"></i> <!-- Half Star -->
+                {% else %}
+                    <i class="far fa-star" style="color: gray;"></i> <!-- Empty Star -->
+                {% endif %}
+            {% endfor %}
+        {% endwith %}
+    </span><br><br>
+    <a href="{% url 'add_to_cart' product.pk %}"><button type="submit">Add to cart</button></a>
+      
+    <!-- Comments and rating section -->
+    <h2>Customer Reviews</h2>
+    {% if comment_rating %}
+        {% for cr in comment_rating %}
+            <div style="margin-bottom: 15px; border-bottom: 1px solid #ccc; padding-bottom: 10px;">
+                <strong>{{ cr.user.username }}</strong><br>
+                <span>{{ cr.comment }}</span>
+                <span>Rating: {{ cr.rating }}★</span>
+            </div>
+        {% endfor %}
+    {% else %}
+        <h2>No reviews yet. Be the first to add one!</h2>
+    {% endif %}
+
+    <!-- Review form -->
+    <h3>Leave a Review</h3>
+    <form action="{% url 'add_comment_rating' product.pk %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

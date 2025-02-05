@@ -1,0 +1,122 @@
+const topsData = [
+  {
+    id: 909080831,
+    name: "Knitted Top",
+    brand: "Zara",
+    price: 648,
+    originalPrice: 1295,
+    discount: "50% off",
+    size: "S, M, L, XL",
+    images: [
+      "https://ukbhatia.com/wp-content/uploads/2023/12/193351417364.jpg",
+
+      "https://ukbhatia.com/wp-content/uploads/2023/12/1706432852106.jpg",
+    ],
+  },
+  {
+    id: 909080832,
+    name: "High Neck Full Sleeve Top",
+    brand: "GESPO",
+    price: 1200,
+    originalPrice: 2400,
+    discount: "50% off",
+    size: "M, L, XL, XXL",
+    images: [
+      "https://m.media-amazon.com/images/I/71epDylXwQL._SY679_.jpg",
+      "https://m.media-amazon.com/images/I/61GKwg2NOmL._SY550_.jpg",
+    ],
+  },
+  {
+    id: 909080833,
+    name: "Summer Top",
+    brand: "H&M",
+    price: 499,
+    originalPrice: 999,
+    discount: "50% off",
+    size: "S, M, L",
+    images: [
+      "https://m.media-amazon.com/images/I/71gm6elDS0L._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71QFgVtnfnL._SX425_.jpg",
+    ],
+  },
+  {
+    id: 909080835,
+    name: "Floral Top",
+    brand: "Forever 21",
+    price: 899,
+    originalPrice: 1799,
+    discount: "50% off",
+    size: "S, M, L",
+    images: [
+      "https://m.media-amazon.com/images/I/71GSHlOO9vL._SY550_.jpg",
+      "https://m.media-amazon.com/images/I/71RK0jhsaaL._SY550_.jpg",
+    ],
+  },
+  {
+    id: 909080836,
+    name: "Graphic T-shirt",
+    brand: "Nike",
+    price: 699,
+    originalPrice: 1399,
+    discount: "50% off",
+    size: "S, M, L, XL",
+    images: [
+      "https://m.media-amazon.com/images/I/51En0lCI+EL._SX425_.jpg",
+      "https://m.media-amazon.com/images/I/61tP-UVED7L._SX425_.jpg",
+    ],
+  },
+  {
+    id: 909080837,
+    name: "Round Neck Top",
+    brand: "Istyle Can",
+    price: 1499,
+    originalPrice: 2999,
+    discount: "50% off",
+    size: "S, M, L, XL",
+    images: [
+      "https://m.media-amazon.com/images/I/6121waqo0PL._SX522_.jpg",
+      "https://m.media-amazon.com/images/I/61ws7K2H0NL._SX522_.jpg",
+    ],
+  },
+  {
+    id: 909080838,
+    name: "Sleeveless Solid",
+    brand: "KOTTY",
+    price: 3200,
+    originalPrice: 6400,
+    discount: "50% off",
+    size: "One Size",
+    images: [
+      "https://m.media-amazon.com/images/I/818FnXmwPOL._SY550_.jpg",
+      "https://m.media-amazon.com/images/I/715KV7MZ7QL._SY550_.jpg",
+    ],
+  },
+  {
+    id: 909080839,
+    name: "shirt",
+    brand: "GRECIILOOKS",
+    price: 2999,
+    originalPrice: 5999,
+    discount: "50% off",
+    size: "7, 8, 9, 10",
+    images: [
+      "https://m.media-amazon.com/images/I/81Yb4cZqxoL._SY550_.jpg",
+      "https://m.media-amazon.com/images/I/71gqJqkRg+L._SY550_.jpg",
+    ],
+  },
+  {
+    id: 9090808310,
+    name: "Sweater Top",
+    brand: "Gucci",
+    price: 2499,
+    originalPrice: 4999,
+    discount: "50% off",
+    size: "One Size",
+    images: [
+      "https://ukbhatia.com/wp-content/uploads/2023/12/1526690192705.jpg",
+
+      "https://ukbhatia.com/wp-content/uploads/2023/12/1127740388478.jpg",
+    ],
+  },
+];
+export default topsData;

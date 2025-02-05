@@ -1,0 +1,170 @@
+/* Parent container for the cards */
+.product-cards-container {
+  display: flex;  /* Use flexbox to display cards horizontally */
+  flex-wrap: wrap;  /* Allow cards to wrap to the next line if needed */
+  gap: 20px;  /* Equal space between cards */
+  justify-content: flex-start; /* Align cards to the left */
+  padding: 10px;  /* Optional padding for the container */
+  width: 100%;  /* Ensure the container takes full width */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+/* Product card container */
+.product-card-container {
+  width: calc(25% - 20px);  /* Each card takes up 25% of the width (4 cards per row) */
+  box-sizing: border-box;  /* Make sure padding and margin are included in the width calculation */
+  margin: 5px; /* Equal margin around each card (left, right, top, and bottom) */
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 2px solid #666;
+}
+  
+/* Image wrapper */
+.product-card-image-wrapper {
+  height: 400px;  /* Set a fixed height for image wrapper */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Product card image styles */
+.product-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images cover the area without distortion */
+  transition: opacity 0.3s ease;
+}
+
+/* Image 1 visible by default */
+.image-1 {
+  opacity: 1;
+}
+
+/* Image 2 hidden by default */
+.image-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover effect to switch images */
+.product-card-container:hover .image-1 {
+  opacity: 0;
+}
+
+.product-card-container:hover .image-2 {
+  opacity: 1;
+}
+
+/* Hover icons (wishlist & search) */
+.product-card-hover-icons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+}
+
+.product-card-container:hover .product-card-hover-icons {
+  opacity: 1;
+  
+}
+
+.product-card-icon {
+  background-color: white;
+  padding: 8px;
+  border-radius: 50%;
+  font-size: 35px;
+  color: rgb(90, 90, 91);
+  transition: background-color 0.3s ease;
+
+}
+
+.product-card-icon:hover {
+  background-color: rgb(90, 90, 91);
+  color: white;
+
+  
+}
+
+/* Add to cart button */
+.product-card-add-to-cart {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(90, 90, 91);
+  color: white;
+  border: none;
+  opacity: 0;
+  text-align: center;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  
+}
+
+.product-card-container:hover .product-card-add-to-cart {
+  opacity: 1;
+}
+
+/* Content (title and price) */
+.product-card-content {
+  padding: 10px;
+  text-align: left;
+}
+
+/* Product card title with ellipsis for overflow */
+
+.product-card-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0;
+  white-space: nowrap; /* Prevent title from wrapping */
+  overflow: hidden;    /* Hide overflowing text */
+  text-overflow: ellipsis; /* Show ellipsis (...) when text overflows */
+}
+
+.product-card-price {
+  color: #888;
+  font-size: 15px;
+}
+
+
+/* ----------------- Responsive Design ----------------- */
+/* For tablets (3 cards per row below 768px) */
+@media (max-width: 768px) {
+  .product-card-container {
+    width: calc(33.33% - 10px);  /* Increase card size by reducing margin */
+    margin: 1px; /* Reduce margin around each card */
+  }
+}
+
+
+/* For mobile (2 cards per row below 480px) */
+@media (max-width: 480px) {
+  .product-card-container {
+    width: calc(50% - 7px);  /* 2 cards per row on mobile screens */
+    margin: 1px; /* Even smaller margin on mobile */
+  }
+
+  /* Reduce the height of the image on mobile */
+  .product-card-image-wrapper {
+    height: 260px;  /* Adjust height as needed */
+    
+  }
+
+  /* Optional: Adjust image scaling if necessary */
+  .product-card-image {
+    object-fit: cover;  /* Keeps the image cover, without distortion */
+    height: 100%;  /* Ensure it covers the reduced height */
+    
+  }
+}

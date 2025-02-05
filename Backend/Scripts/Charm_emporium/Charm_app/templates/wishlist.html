@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <style>
+        .product {
+            margin: 20px 0;
+        }
+        .product img {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .alert {
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .alert-success {
+            background-color: #28a745;
+        }
+
+        .alert-info {
+            background-color: #17a2b8;
+        }
+
+        .alert-warning {
+            background-color: #ffc107;
+            color: #212529;
+        }
+
+        .alert-danger {
+            background-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+
+    {% if messages %}
+        <div>
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <a href="{% url 'logout' %}">Logout</a>
+    <a href="{% url 'cart_details' %}">Cart</a>
+    <a href="{% url 'home' %}">Home</a>
+      
+    <h1>My Wishlist</h1>
+
+    {% if wishlist_items %}
+        {% for item in wishlist_items %}
+            <div class="product">
+                <a href="{% url 'product_details' item.product.pk %}">
+                    <img src="{{ item.product.img.url }}" alt="{{ item.product.p_name }}" style="width:20%; height:20%;">
+                </a>
+                <h2>{{ item.product.p_name }}</h2>
+                <p>Price: ${{ item.product.p_price }}</p>
+                <p>Category: {{ item.product.category.c_name }}</p>
+                <p>Brand: {{ item.product.brand.name }}</p>
+                <a href="{% url 'add_to_cart' item.product.pk %}">Add to cart</a><br>
+                <a href="{% url 'remove_from_wishlist' item.product.pk %}">Remove from Wishlist</a><br>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Your wishlist is empty.</p>
+    {% endif %}
+
+</body>
+</html>

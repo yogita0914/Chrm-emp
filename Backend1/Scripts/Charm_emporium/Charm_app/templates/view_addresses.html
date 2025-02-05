@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Addresses</h2>
+<a href="{% url 'create_address' %}">Add New Address</a>
+<ul>
+    {% for address in addresses %}
+    <li>
+        {{ address.name }} - {{ address.locality }} - {{ address.city }} - {{address.mobile}} - {{address.state}} - {{address.zipcode}}
+        <a href="{% url 'update_address' address.id %}">Edit</a>
+        <a href="{% url 'delete_address' address.id %}">Delete</a>
+
+    </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

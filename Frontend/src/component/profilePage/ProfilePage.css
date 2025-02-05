@@ -1,0 +1,336 @@
+/* Main Profile Page Styling */
+.mainProfilePage {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* Sidebar and content */
+  gap: 2rem;
+  padding: 2rem;
+  min-height: 100vh; /* Full page height */
+}
+
+/* Profile Icon Section */
+.myProfileIcon {
+  width: 6rem;
+  height: 6rem;
+  margin: 0.4rem auto;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.myName {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #333;
+}
+
+/* Sidebar Section with Buttons */
+.accountIcon {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 1rem;
+  height: 24rem;
+  gap: 1.2rem;
+  object-fit: cover;
+}
+
+.accountInformation {
+  display: flex;
+  padding: 0.8rem;
+  gap: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: #eaeaea; /* Primary button color */
+  color: #000;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+.accountInformation:hover {
+  background-color: #dddcdc; /* Darker shade on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Content Section */
+.profile-content {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.profileForm {
+  display: grid;
+  gap: 1rem;
+}
+
+.userPersonalData {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.profileLabel {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.address-input{
+  display: flex;
+  gap: 8px;
+}
+
+.profile-input input, .address-input input, .name-input input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+input[readonly] {
+  background-color: #f0f0f0;
+  font-size: 14px;
+  cursor: not-allowed;
+}
+
+.gender {
+  display: flex;
+  gap: 1rem;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  border-radius: 0.5rem;
+  margin-top: 18px;
+}
+
+.radioInput {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.mobileNumber{
+  margin-top: 10px;
+}
+
+/* Suggestion Section */
+.suggestion {
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.suggestion h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.suggestion h4 {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.suggestion p {
+  margin-top: 0.5rem;
+  line-height: 1.5;
+  font-size: 1rem;
+  color: #555;
+}
+
+.profilePhotoActions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.addPhotoButton {
+  background-color: #eaeaea;
+  color: #000;
+  border: none;
+  padding: 5px 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.editPhotoButton:hover,
+.addPhotoButton:hover {
+  background-color: #dddcdc;;
+}
+
+.logoutButton {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.logoutButton h3 {
+  color: black;
+}
+
+.myProfileIcon {
+  width: 100px; /* Adjust size as needed */
+  height: 100px;
+  border-radius: 50%;
+}
+
+.myName {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .mainProfilePage {
+    grid-template-columns: 1fr; /* Stacks sidebar and content vertically */
+    gap: 1.5rem;
+  }
+
+  .accountIcon {
+    width: 100%;
+  }
+
+  .profile-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .myProfileIcon {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .myName {
+    font-size: 1.5rem;
+  }
+  .accountIcon{
+    height: auto;
+    margin-top: 10px;
+  }
+  .addPhotoButton {
+    padding: 5px 10px;
+    font-size: 14px;
+    /* margin-left: 85px; */
+  }
+  .gender{
+    padding: 5px;
+  }
+  .profileLabel {
+    font-size: 1rem;
+  }
+  .profile-input input {
+    padding: 0.6rem;
+  }
+
+  .suggestion h1 {
+    font-size: 1.2rem;
+  }
+
+  .suggestion p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainProfilePage {
+    padding: 1rem;
+  }
+
+  .accountIcon {
+    gap: 0.5rem;
+
+  }
+  .profileForm{
+    gap: 8px;
+  }
+  .profile-content {
+    padding: 1rem;
+  }
+  
+  .accountInformation {
+    font-size: 0.9rem; /* Smaller font size for mobile */
+    padding: 0.6rem;
+  }
+  .accountInformation h3 {
+    margin: 0;
+    font-size: 1rem; /* Adjust text size */
+  }
+
+  .suggestion h1 {
+    font-size: 1.5rem;
+  }
+
+  .suggestion p {
+    font-size: 1rem;
+  }
+}
+
+/* Extra Small Screens: 380px */
+@media (max-width: 380px) {
+  .myProfileIcon {
+    width: 4rem;
+    height: 4rem;
+  }
+  .myName {
+    font-size: 1.2rem;
+  }
+  .accountIcon{
+    width: 100%;
+  }
+
+  .profileLabel {
+    font-size: 0.9rem;
+  }
+
+  .profile-input input {
+    padding: 0.5rem;
+  }
+
+  .accountInformation {
+    width: 100%;
+    font-size: 0.8rem;
+    padding: 0.6rem;
+  }
+
+  .suggestion h1 {
+    font-size: 1rem;
+  }
+
+  .suggestion p {
+    font-size: 0.7rem;
+  }
+  .profile-content, .profileDetails{
+    width: 100%;
+    padding: 0.5rem;
+  }
+  .gender{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .profilePhotoActions {
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .editPhotoButton,
+  .addPhotoButton {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+
+  .accountInformation {
+    flex-direction: row;
+    font-size: 14px;
+  }
+}

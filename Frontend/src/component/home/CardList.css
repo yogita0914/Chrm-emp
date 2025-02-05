@@ -1,0 +1,29 @@
+.w1-cards-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap onto the next line when necessary */
+    justify-content: flex-start; /* Align cards to the left */
+    gap: 13px; /* Space between cards */
+    width: 100%; /* Container takes up the full width of its parent */
+    margin: 10px auto; /* Centers the container horizontally with top/bottom margin */
+    /* max-width: 1400px;  */
+    /* Maximum width for the container, you can adjust this based on your design */
+    padding: 0 20px; /* Adds padding on the left and right to ensure equal spacing */
+    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+  }
+  
+
+ 
+/* Adjust the gap for screens 760px or smaller */
+@media screen and (max-width: 768px) {
+  .w1-cards-container {
+      gap: 12px; /* Reduce gap for smaller screens */
+  }
+}
+
+  @media (max-width: 480px) {
+    .w1-cards-container {
+      margin: 0 auto; /* Remove margin for screens smaller than 480px */
+      padding: 0 5px; /* Adjust padding to ensure equal spacing on both sides */
+      gap: 8px; /* Adjust the gap between cards on smaller screens */
+    }
+  }

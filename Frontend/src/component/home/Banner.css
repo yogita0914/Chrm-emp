@@ -1,0 +1,34 @@
+/* Style for the container */
+.w1-container {
+    width: 100%;
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+
+.w1-discount-banner{
+    background-color: #0088CC;    
+    font-size: 32px;
+    color:white;
+    text-align: center;
+    padding: 20px ; /* Reduced padding from 20px to 10px */
+
+}
+
+/* Media Query for very small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .w1-discount-banner {
+    font-size: 20px; /* Reduced font size for smaller screens */
+    padding: 15px; /* You can adjust the padding if needed */
+  }
+}
+
+
+/* Media Query for very small screens (max-width: 480px) */
+@media (max-width: 320px) {
+  .w1-discount-banner {
+    font-size: 18px; /* Reduced font size for smaller screens */
+    padding: 10px; /* You can adjust the padding if needed */
+  }
+}

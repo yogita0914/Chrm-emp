@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .alert {
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .alert-success {
+            background-color: #28a745;
+        }
+
+        .alert-info {
+            background-color: #17a2b8;
+        }
+
+        .alert-warning {
+            background-color: #ffc107;
+            color: #212529;
+        }
+
+        .alert-danger {
+            background-color: #dc3545;
+        }
+
+        .product {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .product a {
+            display: inline-block;
+            margin-top: 5px;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+
+        .product a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    {% if messages %}
+    <div>
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+
+    {% for item in cart_item %}
+        <h1>{{item.product}}</h1>
+        Quantity:{{item.quantity}}
+        <a href="{% url 'reduce_from_cart' item.id %}">reduce</a>
+        <a href="{% url 'add_to_cart' item.product.id %}">Add</a>
+        <a href="{% url 'remove_from_cart' item.id %}"><button>remove</button></a>
+    {% endfor %}
+</body>
+</html>

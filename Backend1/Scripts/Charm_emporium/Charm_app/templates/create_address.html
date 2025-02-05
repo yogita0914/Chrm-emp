@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showPopup(event) {
+            event.preventDefault(); // Prevent the form from being submitted immediately
+            alert("Address Created Successfully!");
+            event.target.closest('form').submit(); // Manually submit the form after showing the popup
+        }
+    </script>
+</head>
+<body>
+    
+    <h2>Create Address</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" onclick="showPopup(event)">Submit</button>
+    </form>
+
+</body>
+</html> 
+
+
