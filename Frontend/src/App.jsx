@@ -4,7 +4,7 @@ import Navbar from "./component/navbar/Navbar";
 import Home from "./pages/home/Home";
 import Footer from "./component/footer/Footer";
 import Contact from "./pages/contact/Contact";
-import Aboutus from "./pages/AbooutUs/Aboutus";
+import Aboutus from "./pages/AboutUs/Aboutus";
 import "./index.css";
 import PrivacyPolicy from "./pages/policies/privacypolicy/PrivacyPolicy";
 import FAQ from "./pages/policies/faqSection/FaqSection";
