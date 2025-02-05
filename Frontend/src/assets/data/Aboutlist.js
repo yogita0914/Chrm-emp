@@ -1,4 +1,4 @@
-import Card1 from "../images/card1.svg";
+import Card1 from "../images/Card1.svg";
 import Card2 from "../images/Card2.svg";
 import Card3 from "../images/Card3.svg";
 import Card4 from "../images/Card4.svg";
