@@ -20,7 +20,7 @@ import blushData from "../../assets/blushData/blushData";
 import foundationData from "../../assets/foundationData/foundationData";
 import Scrollcarousel from "../home/Scrollcarousel";
 import { useWishlist } from "../../context/WishlistContext";
-import summerData from "../../assets/SummerData/SummerData";
+import summerData from "../../assets/summerData/summerData";
 
 const ProductPage = () => {
   const [quantity, setQuantity] = useState(1);

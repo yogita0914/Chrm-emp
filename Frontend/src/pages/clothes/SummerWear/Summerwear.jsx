@@ -4,7 +4,7 @@ import CardsDesign from "../../../component/cardsDesign/CardsDesign";
 import "./SummerWear.css";
 import { useWishlist } from "../../../context/WishlistContext";
 import { useCart } from "../../../context/CartContext";
-import summerData from "../../../assets/SummerData/SummerData";
+import summerData from "../../../assets/summerData/summerData";
 
 const SummerWear = () => {
   const [showOnSale, setShowOnSale] = useState(false);
