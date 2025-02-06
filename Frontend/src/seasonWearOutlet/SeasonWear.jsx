@@ -1,6 +1,6 @@
 import React from "react";
 import Winterwear from "../pages/clothes/winterwear/WinterWear";
-import SummerWear from "../pages/clothes/summerWear/summerwear";
+import SummerWear from "../pages/clothes/SummerWear/Summerwear";
 import BottomWear from "../pages/clothes/bottomwear/BottomWear";
 import Top from "../pages/clothes/tops/Tops";
 import Dresses from "../pages/clothes/dresses/Dresses";
