@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CardsDesign from "../../../component/cardsDesign/CardsDesign";
 // import sneakerData from "../../../assets/sneakerData/sneakerData";
-import "./sneakers.css";
+import "./Sneakers.css";
 import { useCart } from "../../../context/CartContext";
 import SneakersData from "../../../assets/shoesData/sneakerData";
 import { useWishlist } from "../../../context/WishlistContext";
